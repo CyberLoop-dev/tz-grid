@@ -23,13 +23,17 @@ TZ Grid converts one local meeting time into several target time zones using Pyt
 
 ## 🚀 Quick Start
 
-<pre><code>python main.py --date YYYY-MM-DD --time HH:MM --from-zone Asia/Tehran --to-zones Europe/Berlin,America/New_York</code></pre>
+<pre><code>python -m venv .venv
+# Windows: .venv\Scripts\activate
+# macOS/Linux: source .venv/bin/activate
+pip install -r requirements.txt
+python main.py --date YYYY-MM-DD --time HH:MM --from-zone Asia/Tehran --to-zones Europe/Berlin,America/New_York</code></pre>
 
 ## 🧰 Tech Stack
 
 - Python 3.10+ standard library
 - zoneinfo and datetime
-- IANA timezone database available on the host system
+- tzdata package for hosts without a system IANA timezone database
 
 ## 🗂️ Folder Structure
 
